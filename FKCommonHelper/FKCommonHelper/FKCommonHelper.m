@@ -55,7 +55,7 @@ NSString *const kWebImageURLScheme = @"image-preview-index";
     if (!string || !imageName) {
         return nil;
     }
-    NSDictionary *attributes = @{NSFontAttributeName:[UIFont systemFontOfSize:14.f weight:UIFontWeightThin],
+    NSDictionary *attributes = @{NSFontAttributeName:[UIFont systemFontOfSize:14.f],
                                  NSForegroundColorAttributeName:[UIColor blackColor]};
     NSMutableAttributedString *mainString = [[NSMutableAttributedString alloc] initWithString:string
                                                                                    attributes:attributes];
