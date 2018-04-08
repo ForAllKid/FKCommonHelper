@@ -517,4 +517,16 @@ NSString *const kWebImageURLScheme = @"image-preview-index";
     return YES;
 }
 
++ (BOOL)checkCarID:(NSString *)carID{
+    
+    if (carID.length != 7) {
+        return NO;
+    }
+    NSString *carRegex = @"^[\u4e00-\u9fa5]{1}[a-hj-zA-HJ-Z]{1}[a-hj-zA-HJ-Z_0-9]{4}[a-hj-zA-HJ-Z_0-9_\u4e00-\u9fa5]$";
+    NSPredicate *carTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",carRegex];
+    return [carTest evaluateWithObject:carID];
+    
+    return YES;
+}
+
 @end

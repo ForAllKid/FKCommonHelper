@@ -243,6 +243,9 @@ typedef NS_ENUM(NSInteger, DeviceType) {
  */
 + (BOOL)checkIDCardNumber:(NSString *)IDCardNumber;
 
+//车牌号校验
++ (BOOL)checkCarID:(NSString *)carID;
+
 @end
 
 NS_ASSUME_NONNULL_END
